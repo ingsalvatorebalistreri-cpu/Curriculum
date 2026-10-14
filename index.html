@@ -1,0 +1,388 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><meta name="description" content="CV of Salvatore Balistreri, Head of Asset Management for solar and wind portfolios, Berlin."><style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Balistreri Lebenslauf</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800;125,900&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: dark "control room" CV for the German market — status bar, identity with photo slot + two meters (wind / solar), KPI strip, panel grid; German conventions (MM/YYYY, personal data, references). Deliberately dark in every theme. */
+:root {
+  --bg: #070d14;
+  --panel: #0d1722;
+  --panel-2: #111e2c;
+  --ink: #e9f0f6;
+  --muted: #8297ab;
+  --line: #1c2c3d;
+  --sun: #ffb020;
+  --sun-dim: rgba(255, 176, 32, .14);
+  --wind: #3fd0b8;
+  --wind-dim: rgba(63, 208, 184, .13);
+  --ok: #57d68d;
+  --font-display: "Archivo", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Manrope", "Segoe UI", system-ui, sans-serif;
+  --font-data: "JetBrains Mono", ui-monospace, Consolas, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.6; hyphens: manual; }
+h1, h2, h3 { font-family: var(--font-display); font-stretch: 125%; margin: 0; text-wrap: balance; hyphens: manual; }
+:focus-visible { outline: 2px solid var(--sun); outline-offset: 3px; border-radius: 4px; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: 20px; padding-block: 0 56px; display: grid; gap: 18px; }
+
+.status { display: flex; flex-wrap: wrap; gap: 8px 22px; align-items: center; font-family: var(--font-data); font-size: 12px; color: var(--muted); padding-block: 14px; border-bottom: 1px solid var(--line); }
+.status .live { display: inline-flex; align-items: center; gap: 8px; color: var(--ok); }
+.status .live::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 4px rgba(87,214,141,.18); }
+@media (prefers-reduced-motion: no-preference) { .status .live::before { animation: pulse 2.4s ease-in-out infinite; } }
+@keyframes pulse { 50% { box-shadow: 0 0 0 7px rgba(87,214,141,.04); } }
+.status b { color: var(--ink); font-weight: 500; }
+
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; min-width: 0; }
+.ptitle { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; font-family: var(--font-data); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+.ptitle span:last-child { letter-spacing: .04em; }
+
+/* Identity */
+.top { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 18px; }
+.id h1 { font-weight: 900; font-size: clamp(34px, 4.8vw, 54px); line-height: .98; letter-spacing: -.02em; }
+.id h1 span { color: var(--sun); display: block; }
+.id .role { color: var(--muted); margin: 14px 0 14px; }
+.id .role b { color: var(--ink); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-family: var(--font-data); font-size: 11.5px; padding: 3px 9px; border-radius: 6px; border: 1px solid var(--line); color: var(--muted); }
+.chip.s { color: var(--sun); border-color: rgba(255,176,32,.4); }
+.chip.w { color: var(--wind); border-color: rgba(63,208,184,.4); }
+.contact { display: grid; gap: 8px; margin-top: 14px; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 8px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 8px; padding: 7px 10px; font-family: var(--font-data); font-size: 13px; min-width: 0; }
+.row span { user-select: all; overflow-wrap: anywhere; }
+.row button { flex: none; font: inherit; font-size: 11px; color: var(--bg); background: var(--sun); border: 0; border-radius: 5px; padding: 3px 8px; cursor: pointer; }
+
+.meter { display: grid; align-content: space-between; gap: 12px; position: relative; overflow: hidden; }
+.meter.w { background: linear-gradient(160deg, var(--wind-dim), transparent 70%), var(--panel); }
+.meter.s { background: linear-gradient(160deg, var(--sun-dim), transparent 70%), var(--panel); }
+.meter .val { font-family: var(--font-display); font-stretch: 125%; font-weight: 900; font-size: clamp(46px, 6vw, 74px); line-height: .9; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.meter.w .val { color: var(--wind); }
+.meter.s .val { color: var(--sun); }
+.meter .val small { font-size: .38em; letter-spacing: 0; margin-left: 4px; color: var(--muted); }
+.meter .lbl { font-weight: 700; font-size: 15px; }
+.meter .sub { color: var(--muted); font-size: 13px; }
+.split { display: flex; height: 8px; border-radius: 4px; overflow: hidden; background: var(--line); }
+.split i { display: block; height: 100%; }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font-family: var(--font-data); font-size: 11.5px; color: var(--muted); margin-top: 8px; }
+.legend span::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; background: var(--c); }
+.meter svg.deco { position: absolute; right: -14px; top: -14px; width: 110px; height: 110px; opacity: .16; fill: none; stroke-width: 4; stroke-linecap: round; }
+.meter.w svg.deco { stroke: var(--wind); }
+.meter.s svg.deco { stroke: var(--sun); }
+@media (prefers-reduced-motion: no-preference) { .meter.w svg.deco .blades { transform-origin: 50px 50px; animation: spin 9s linear infinite; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.kpis { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; min-width: 0; }
+.kpi b { display: block; font-family: var(--font-data); font-weight: 500; font-size: 20px; color: var(--ink); font-variant-numeric: tabular-nums; }
+.kpi span { display: block; font-size: 12px; color: var(--muted); line-height: 1.35; margin-top: 2px; }
+
+.usp { display: grid; grid-template-columns: auto 1fr; gap: 16px; align-items: center; background: linear-gradient(90deg, var(--sun-dim), var(--wind-dim)); border: 1px solid var(--line); border-radius: 14px; padding: 16px 20px; }
+.usp .flag { display: flex; gap: 4px; }
+.usp .flag i { width: 10px; height: 34px; border-radius: 3px; }
+.usp p { margin: 0; font-size: 15.5px; }
+.usp p b { font-weight: 700; }
+
+.grid2 { display: grid; grid-template-columns: 1.35fr 1fr; gap: 18px; }
+.grid2 > * { min-width: 0; }
+.col { display: grid; gap: 18px; align-content: start; }
+
+.chart svg { display: block; width: 100%; height: auto; }
+.ax { fill: var(--muted); font-family: var(--font-data); font-size: 11px; }
+.gl { stroke: var(--line); stroke-dasharray: 2 4; }
+.area { fill: url(#gArea); }
+.lineP { fill: none; stroke: var(--sun); stroke-width: 2.5; }
+.pt { fill: var(--bg); stroke: var(--sun); stroke-width: 2; }
+.pv { fill: var(--ink); font-family: var(--font-data); font-size: 11.5px; }
+.ev { fill: var(--wind); font-family: var(--font-body); font-size: 11px; font-weight: 700; }
+.cap { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
+
+.about p { margin: 0 0 10px; font-size: 16px; }
+.about p:last-child { margin: 0; }
+.about p:first-child::before { content: "> "; font-family: var(--font-data); color: var(--sun); }
+
+.log { display: grid; }
+.entry { display: grid; grid-template-columns: 126px 14px 1fr; gap: 0 14px; padding-block: 14px; border-top: 1px solid var(--line); }
+.entry:first-child { border-top: 0; padding-top: 0; }
+.entry .t { font-family: var(--font-data); font-size: 12px; color: var(--muted); padding-top: 3px; font-variant-numeric: tabular-nums; }
+.entry .d { width: 10px; height: 10px; border-radius: 50%; margin-top: 7px; background: var(--sun); }
+.entry .d.w { background: linear-gradient(90deg, var(--sun) 50%, var(--wind) 50%); }
+.entry > div:last-child { min-width: 0; }
+.entry h3 { font-size: 17px; font-weight: 800; }
+.entry .org { color: var(--sun); font-weight: 700; font-size: 14px; margin: 1px 0 6px; }
+.entry .org.w { color: var(--wind); }
+.entry .org small { color: var(--muted); font-weight: 500; }
+ul { margin: 0; padding-left: 16px; display: grid; gap: 5px; }
+li { font-size: 14.5px; }
+li::marker { color: var(--muted); }
+li strong { font-weight: 700; color: var(--ink); }
+.entry p { margin: 0; font-size: 14px; color: var(--muted); }
+
+.deal { display: grid; gap: 6px; }
+.deal + .deal { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 14px; }
+.deal .k { font-family: var(--font-data); font-size: 11px; color: var(--wind); letter-spacing: .08em; text-transform: uppercase; }
+.deal .n { font-family: var(--font-display); font-stretch: 125%; font-weight: 900; font-size: 32px; line-height: 1; color: var(--sun); }
+.deal h3 { font-size: 16px; font-weight: 800; }
+.deal p { margin: 0; font-size: 14px; color: var(--muted); }
+
+/* Skills, grouped */
+.sgroup { display: grid; gap: 8px; padding-block: 12px; border-top: 1px solid var(--line); }
+.sgroup:first-of-type { border-top: 0; padding-top: 0; }
+.sgroup h4 { margin: 0; display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; }
+.sgroup h4 i { width: 8px; height: 8px; border-radius: 2px; background: var(--c); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span { font-size: 12.5px; background: var(--panel-2); border: 1px solid var(--line); border-radius: 6px; padding: 3px 9px; }
+.tools { display: grid; gap: 14px; }
+.tool { display: grid; grid-template-columns: 38px 1fr; gap: 12px; }
+.tool > i { width: 38px; height: 38px; border-radius: 9px; display: grid; place-items: center; background: var(--wind-dim); color: var(--wind); font-style: normal; font-family: var(--font-data); font-size: 11.5px; font-weight: 500; }
+.tool > div { min-width: 0; }
+.tool .th { display: flex; justify-content: space-between; gap: 8px; align-items: center; flex-wrap: wrap; }
+.tool b { font-size: 14.5px; }
+.lvl { display: inline-flex; align-items: center; gap: 6px; font-family: var(--font-data); font-size: 11px; color: var(--muted); }
+.lvl .dots { display: inline-flex; gap: 3px; }
+.lvl .dots i { width: 12px; height: 5px; border-radius: 2px; background: var(--line); }
+.lvl .dots i.on { background: var(--wind); }
+.tool span.d { display: block; font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+
+dl { margin: 0; display: grid; gap: 10px; }
+dt { font-weight: 700; font-size: 14.5px; }
+dd { margin: 0; font-size: 13.5px; color: var(--muted); }
+.pd { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: 14px; }
+.pd span:nth-child(odd) { color: var(--muted); font-family: var(--font-data); font-size: 12px; padding-top: 2px; }
+.langs { display: grid; gap: 8px; }
+.lg { display: grid; grid-template-columns: 82px 1fr 128px; gap: 10px; align-items: center; font-size: 13.5px; }
+.lg .bar { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
+.lg .bar i { display: block; height: 100%; background: var(--wind); }
+.lg em { font-style: normal; font-family: var(--font-data); font-size: 11.5px; color: var(--muted); text-align: right; }
+.foot { font-size: 12.5px; color: var(--muted); display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 14px; }
+.qrbox { display: inline-block; background: #fff; border-radius: 10px; padding: 8px; }
+.qrbox img, .qrbox canvas { display: block; width: 120px; height: 120px; }
+
+@media (max-width: 960px) {
+  .top { grid-template-columns: 1fr 1fr; }
+  .top .id { grid-column: 1 / -1; }
+  .kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grid2 { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .top { grid-template-columns: 1fr; }
+  .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .entry { grid-template-columns: 14px 1fr; }
+  .entry .t { grid-column: 2; }
+  .entry .d { grid-row: 1; grid-column: 1; }
+  .entry > div:last-child { grid-column: 2; }
+  .lg { grid-template-columns: 76px 1fr; }
+  .lg em { grid-column: 1 / -1; text-align: left; margin-top: -4px; }
+  .usp { grid-template-columns: 1fr; }
+}
+</style>
+
+<div class="wrap" lang="en">
+  <div class="status">
+    <span class="live">Open to new roles</span>
+    <span>Location <b>Berlin, Germany</b></span>
+    <span>Assets <b>Solar PV + Wind</b></span>
+    <span>Markets <b>IT · FR · ES · UK · DE</b></span>
+    <span>Updated <b>10/2026</b></span>
+  </div>
+
+  <div class="top">
+    <section class="panel id">
+      <div class="ptitle"><span>Curriculum vitae</span><span>Head of Asset Management</span></div>
+      <h1>Salvatore <span>Balistreri</span></h1>
+      <p class="role"><b>Head of Asset Management</b> for utility-scale solar and wind parks. Environmental engineer, 20+ years in renewables.</p>
+      <div class="chips"><span class="chip s">Solar PV</span><span class="chip w">Wind</span><span class="chip">M&amp;A</span><span class="chip">Project finance</span><span class="chip">Data &amp; AI</span></div>
+      <div class="contact">
+        <div class="row"><span id="mail">ing.salvatore.balistreri@gmail.com</span><button type="button" data-copy="mail">Copy</button></div>
+        <div class="row"><span id="tel">+49 162 2609965</span><button type="button" data-copy="tel">Copy</button></div>
+      </div>
+    </section>
+
+    <section class="panel meter w">
+      <svg class="deco" viewBox="0 0 100 100"><g class="blades"><path d="M50 50 L50 10"/><path d="M50 50 L85 70"/><path d="M50 50 L15 70"/></g><circle cx="50" cy="50" r="4"/></svg>
+      <div class="ptitle"><span>Encavis · 2014–2019</span><span>Solar + Wind</span></div>
+      <div class="val">~500<small>MW</small></div>
+      <div><div class="lbl">111 wind and solar parks in Italy and France</div><div class="sub">Team of up to 12 · SPV managing director in IT, UK, DE, ES</div></div>
+      <div>
+        <div class="split" aria-hidden="true"><i style="width:33%;background:var(--sun)"></i><i style="width:67%;background:var(--wind)"></i></div>
+        <div class="legend"><span style="--c:var(--sun)">Italy 166 MW</span><span style="--c:var(--wind)">France 334 MW</span></div>
+      </div>
+    </section>
+
+    <section class="panel meter s">
+      <svg class="deco" viewBox="0 0 100 100"><circle cx="50" cy="50" r="15"/><path d="M50 15V5M50 95V85M15 50H5M95 50H85M25 25l-7-7M82 82l-7-7M25 75l-7 7M82 18l-7 7"/></svg>
+      <div class="ptitle"><span>CLERE · since 2019</span><span>Solar</span></div>
+      <div class="val">166<small>MWp</small></div>
+      <div><div class="lbl">Peak group portfolio managed</div><div class="sub">Italy · Spain · UK · team of 5 (up to 7)</div></div>
+      <div>
+        <div class="split" aria-hidden="true"><i style="width:44%;background:var(--sun)"></i><i style="width:21%;background:#e07b39"></i><i style="width:10%;background:#c9a24a"></i><i style="width:25%;background:#6b7f93"></i></div>
+        <div class="legend"><span style="--c:var(--sun)">Italy 73</span><span style="--c:#e07b39">UK 35</span><span style="--c:#c9a24a">Spain 17</span><span style="--c:#6b7f93">DE + JP 41</span></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="usp">
+    <div class="flag" aria-hidden="true"><i style="background:#1f1f1f"></i><i style="background:#d40000"></i><i style="background:#ffce00"></i><i style="background:#009246;margin-left:6px"></i><i style="background:#f4f5f0"></i><i style="background:#ce2b37"></i></div>
+    <p><b>The bridge between German investors and Southern European assets.</b> Since 2005 I have worked in Germany for German companies, managing their plants in Italy and France. I negotiate in German and Italian, on site as well as in the boardroom.</p>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><b>20+ yrs</b><span>in renewables since 2005</span></div>
+    <div class="kpi"><b>€33.5m</b><span>non-recourse refinancing, 2021</span></div>
+    <div class="kpi"><b>38 MWp</b><span>27 SPVs sold, 2024</span></div>
+    <div class="kpi"><b>+14.8 MWp</b><span>repowering and new builds</span></div>
+    <div class="kpi"><b>15 SPVs</b><span>acquired in Italy, 2020–22</span></div>
+    <div class="kpi"><b>4 countries</b><span>as SPV managing director</span></div>
+  </div>
+
+  <div class="grid2">
+    <section class="panel chart">
+      <div class="ptitle"><span>CLERE group capacity</span><span>MWp at year-end</span></div>
+      <svg viewBox="0 0 620 230" role="img" aria-label="CLERE group operating portfolio in MWp: 2018 85, 2019 124, 2020 153, 2021 164, 2022 166, 2023 166, 2024 129, 2025 129">
+        <defs><linearGradient id="gArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb020" stop-opacity=".35"/><stop offset="1" stop-color="#ffb020" stop-opacity="0"/></linearGradient></defs>
+        <g id="chart"></g>
+      </svg>
+      <p class="cap">Source: CLERE AG consolidated annual reports. From 2020 the total includes a 20 MWp share in a Japanese plant.</p>
+    </section>
+    <section class="panel about">
+      <div class="ptitle"><span>About me</span><span>README</span></div>
+      <p>I am an engineer who ended up in finance and never stopped being an engineer. I want to know why a plant underperforms before I explain it to a bank, and I would rather build a tool than repeat a spreadsheet every month. That is how I learned Microsoft Fabric and AI automation without being a programmer.</p>
+      <p>I like small teams, direct conversations and numbers that reconcile. I have spent twenty years in solar and I still enjoy visiting a plant on a sunny day.</p>
+    </section>
+  </div>
+
+  <div class="grid2">
+    <section class="panel">
+      <div class="ptitle"><span>Professional experience</span><span>2004 → today</span></div>
+      <div class="log">
+        <div class="entry"><div class="t">03/2019 – today</div><div class="d"></div><div>
+          <h3>Head of Asset Management</h3><div class="org">CLERE AG <small>· Berlin</small></div>
+          <ul>
+            <li>Commercial and technical responsibility for the whole operating portfolio, up to <strong>166 MWp</strong>; director (Amministratore) of the Italian holding and project companies.</li>
+            <li>Lead the asset management team: <strong>5 people, up to 7</strong>.</li>
+            <li>Due diligence and integration of <strong>15 Italian SPVs</strong> (~20 MWp), 2020–2022.</li>
+            <li>Revamping of 13 plants (18.1 MWp) and <strong>+14.8 MWp</strong> of PPA-based new builds and repowering (Enna, Orta Nova Sud, Melilli); budget and cost control of about €25m.</li>
+            <li>Lender reporting and covenants (DSCR), GSE feed-in tariff checks, budgeting, input to the group accounts.</li>
+          </ul>
+        </div></div>
+        <div class="entry"><div class="t">11/2014 – 02/2019</div><div class="d w"></div><div>
+          <h3>Head of Operations Italy &amp; France</h3><div class="org w">Capital Stage AG / Encavis AG <small>· Hamburg</small></div>
+          <ul>
+            <li><strong>Solar and wind portfolio</strong> of 111 parks and ~500 MW: Italy 73 solar parks and 1 wind park (166 MW), France 26 solar and 11 wind parks (334 MW), including third-party mandates.</li>
+            <li>Led a team of <strong>up to 12</strong>; managing director of project companies in Italy, the UK, Germany and Spain.</li>
+            <li>Integrated the Biscaya, Friuli, Stumpf and OPDE acquisitions, the CHORUS Clean Energy takeover (2016) and the Luxel new builds in France.</li>
+          </ul>
+        </div></div>
+        <div class="entry"><div class="t">09/2012 – 10/2014</div><div class="d"></div><div><h3>Investment &amp; Asset Manager</h3><div class="org">ALEA Energy Solutions AG <small>· Berlin</small></div><p>Operating solar portfolio; new investments, due diligence and financial close.</p></div></div>
+        <div class="entry"><div class="t">12/2010 – 08/2012</div><div class="d"></div><div><h3>Country Manager Italy</h3><div class="org">SUNfarming GmbH <small>· Erkner</small></div><p>PV components and large projects in Italy; permitting and financial close.</p></div></div>
+        <div class="entry"><div class="t">12/2008 – 11/2010</div><div class="d"></div><div><h3>Key Account Manager, PV Power Plants</h3><div class="org">SOLON SE <small>· Berlin</small></div><p>Turn-key EPC and O&amp;M contracts for utility-scale PV plants in Italy.</p></div></div>
+        <div class="entry"><div class="t">06/2005 – 11/2008</div><div class="d"></div><div><h3>Country Manager Italy</h3><div class="org">systaic AG <small>· Düsseldorf</small></div><p>Opened the Italian market for building-integrated PV.</p></div></div>
+        <div class="entry"><div class="t">02/2004 – 03/2005</div><div class="d" style="background:var(--muted)"></div><div><h3>Area Sales Manager</h3><div class="org" style="color:var(--muted)">Tecnofer Ecoimpianti S.r.l.</div><p>Sales of plastic-recycling plants.</p></div></div>
+      </div>
+    </section>
+
+    <div class="col">
+      <section class="panel">
+        <div class="ptitle"><span>Key deals</span><span>CLERE</span></div>
+        <div class="deal"><span class="k">2021 · Refinancing</span><span class="n">€33.5m</span><h3>Clere Italia 1</h3><p>Non-recourse loan from Banco BPM and UBI Banca (now Intesa Sanpaolo). 8 SPVs with 17 plants moved into a new holding; Banca IFIS and MPS loans repaid, leases bought out, new interest-rate hedging.</p></div>
+        <div class="deal"><span class="k">2024 · Divestment</span><span class="n">38 MWp</span><h3>Project Lumina</h3><p>Sale of 27 Italian SPVs to Tages Capital SGR (Tages Helios fund). Signed 02/2024, closed 05–06/2024, €15.5m group gain.</p></div>
+      </section>
+
+      <section class="panel">
+        <div class="ptitle"><span>Professional skills</span><span>4 areas</span></div>
+        <div class="sgroup"><h4><i style="--c:var(--sun)"></i>Asset Management</h4><div class="tags"><span>Commercial and technical management</span><span>Budget and P&amp;L</span><span>PR, availability, P50</span><span>O&amp;M and EPC contracts</span><span>Insurance and warranties</span></div></div>
+        <div class="sgroup"><h4><i style="--c:var(--wind)"></i>Transactions and finance</h4><div class="tags"><span>Due diligence</span><span>SPA negotiation</span><span>Signing to closing</span><span>Non-recourse project finance</span><span>DSCR covenants</span><span>Hedging</span></div></div>
+        <div class="sgroup"><h4><i style="--c:#c9a24a"></i>Regulation and grid</h4><div class="tags"><span>Conto Energia</span><span>GSE</span><span>FER-X</span><span>PPA</span><span>Grid connection (TICA, CEI 0-16)</span><span>Revamping and repowering</span></div></div>
+        <div class="sgroup"><h4><i style="--c:#6b7f93"></i>Leadership and governance</h4><div class="tags"><span>Team lead, up to 12</span><span>SPV managing director in 4 countries</span><span>Reporting to management and supervisory boards</span><span>Banks, advisors, authorities</span></div></div>
+      </section>
+
+      <section class="panel">
+        <div class="ptitle"><span>Digital skills</span><span>Self-built</span></div>
+        <div class="tools">
+          <div class="tool"><i>FAB</i><div>
+            <div class="th"><b>Microsoft Fabric and Power BI</b><span class="lvl"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>advanced</span></div>
+            <span class="d">Built a multi-country data platform: daily 15-minute monitoring data from the Meteocontrol VCOM API, meter data, master data from SharePoint, availability checks and Power BI report apps.</span>
+          </div></div>
+          <div class="tool"><i>AI</i><div>
+            <div class="th"><b>AI-assisted automation</b><span class="lvl"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>advanced</span></div>
+            <span class="d">Reusable Claude Code and NotebookLM workflows for due diligence, GSE incentives, grid connection and construction cost control. Not a programmer: I design and deliver working tools.</span>
+          </div></div>
+          <div class="tool"><i>XLS</i><div>
+            <div class="th"><b>Excel financial modelling</b><span class="lvl"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>expert</span></div>
+            <span class="d">Also Lucanet (group reporting), SharePoint, Microsoft 365 and AutoCAD.</span>
+          </div></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <section class="panel">
+      <div class="ptitle"><span>Education</span><span></span></div>
+      <dl>
+        <div><dt>Laurea in Civil and Environmental Engineering, 110/110 cum laude</dt><dd>University of Palermo, 1995–2002 · equivalent to a Master's degree, top grade with honours · Erasmus semester at FH Flensburg, Germany</dd></div>
+        <div><dt>Chartered Engineer</dt><dd>Ordine degli Ingegneri della Provincia di Palermo</dd></div>
+        <div><dt>Diploma, Surveying and Building Technician</dt><dd>Istituto Tecnico per Geometri "Filippo Parlatore", Palermo, 1990–1995</dd></div>
+      </dl>
+    </section>
+    <div class="col">
+      <section class="panel">
+        <div class="ptitle"><span>Languages</span><span></span></div>
+        <div class="langs">
+          <div class="lg">Italian<div class="bar"><i style="width:100%"></i></div><em>native</em></div>
+          <div class="lg">German<div class="bar"><i style="width:92%"></i></div><em>fluent</em></div>
+          <div class="lg">English<div class="bar"><i style="width:70%"></i></div><em>good</em></div>
+          <div class="lg">Spanish<div class="bar"><i style="width:62%"></i></div><em>good</em></div>
+        </div>
+      </section>
+      <section class="panel">
+        <div class="ptitle"><span>Personal details</span><span></span></div>
+        <div class="pd">
+          <span>Nationality</span><span>Italian (EU)</span>
+          <span>In Germany</span><span>since 2005, living in Berlin</span>
+          <span>Interests</span><span>tennis, football, basketball, travel</span>
+        </div>
+        <div id="qrwrap" hidden style="margin-top:16px"><div class="qrbox" id="qrbox"></div></div>
+      </section>
+    </div>
+  </div>
+
+  <div class="foot"><span>Employer references (Arbeitszeugnisse) available on request.</span><span>Berlin, October 2026</span></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const CV_URL = "https://ingsalvatorebalistreri-cpu.github.io/CV/";
+
+(function () {
+  const data = [[2018,85],[2019,124],[2020,153],[2021,164],[2022,166],[2023,166],[2024,129],[2025,129]];
+  const ev = { 2019: "Joined", 2021: "Refinancing", 2024: "Lumina sale" };
+  const W = 620, top = 34, bottom = 196, left = 36, right = 14, max = 200;
+  const X = i => left + i * (W - left - right) / (data.length - 1), Y = v => bottom - v / max * (bottom - top);
+  const ns = "http://www.w3.org/2000/svg", g = document.getElementById("chart");
+  const el = (t, a, txt) => { const e = document.createElementNS(ns, t); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; g.appendChild(e); return e; };
+  for (const t of [0, 50, 100, 150, 200]) { el("line", { x1: left, x2: W - right, y1: Y(t), y2: Y(t), class: "gl" }); el("text", { x: left - 6, y: Y(t) + 4, "text-anchor": "end", class: "ax" }, t); }
+  const pts = data.map(([, v], i) => [X(i), Y(v)]);
+  el("path", { d: "M" + pts.map(p => p.join(",")).join(" L") + ` L${X(data.length - 1)},${bottom} L${X(0)},${bottom} Z`, class: "area" });
+  el("path", { d: "M" + pts.map(p => p.join(",")).join(" L"), class: "lineP" });
+  data.forEach(([yr, v], i) => {
+    el("circle", { cx: X(i), cy: Y(v), r: 4, class: "pt" });
+    el("text", { x: X(i), y: Y(v) - 10, "text-anchor": "middle", class: "pv" }, v);
+    el("text", { x: X(i), y: bottom + 18, "text-anchor": "middle", class: "ax" }, yr);
+    if (ev[yr]) el("text", { x: X(i), y: top - 18, "text-anchor": "middle", class: "ev" }, ev[yr]);
+  });
+})();
+
+document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", () => {
+  const span = document.getElementById(b.dataset.copy);
+  const done = () => { b.textContent = "Copied"; setTimeout(() => b.textContent = "Copy", 1500); };
+  const select = () => { const r = document.createRange(); r.selectNodeContents(span); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+  try { navigator.clipboard.writeText(span.textContent).then(done, select); } catch (e) { select(); }
+}));
+
+if (CV_URL && window.QRCode) {
+  document.getElementById("qrwrap").hidden = false;
+  new QRCode(document.getElementById("qrbox"), { text: CV_URL, width: 240, height: 240, colorDark: "#070d14", colorLight: "#ffffff", correctLevel: QRCode.CorrectLevel.M });
+}
+</script>
+</html>
