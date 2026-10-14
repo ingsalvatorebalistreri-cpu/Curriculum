@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><meta name="description" content="CV of Salvatore Balistreri, Head of Asset Management for solar and wind portfolios, Berlin."><style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Balistreri Lebenslauf</title>
+<title>Salvatore Balistreri – CV</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,800;125,900&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
@@ -125,6 +125,17 @@ li strong { font-weight: 700; color: var(--ink); }
 .deal h3 { font-size: 16px; font-weight: 800; }
 .deal p { margin: 0; font-size: 14px; color: var(--muted); }
 
+/* Milestones */
+.miles { list-style: none; margin: 0; padding: 0 0 0 18px; display: grid; gap: 12px; position: relative; }
+.miles::before { content: ""; position: absolute; left: 4px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(var(--wind), var(--wind) 45%, var(--sun) 55%, var(--sun)); border-radius: 2px; }
+.miles li { position: relative; display: grid; grid-template-columns: 74px 1fr; gap: 0 12px; font-size: 14px; }
+.miles li::before { content: ""; position: absolute; left: -18px; top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--bg); border: 2px solid var(--c); }
+.miles li.w { --c: var(--wind); }
+.miles li.s { --c: var(--sun); }
+.miles .y { grid-row: span 2; font-family: var(--font-data); font-size: 12px; color: var(--c); padding-top: 1px; }
+.miles b { font-weight: 700; }
+.miles li > span:last-child { color: var(--muted); font-size: 13px; }
+
 /* Skills, grouped */
 .sgroup { display: grid; gap: 8px; padding-block: 12px; border-top: 1px solid var(--line); }
 .sgroup:first-of-type { border-top: 0; padding-top: 0; }
@@ -236,18 +247,24 @@ dd { margin: 0; font-size: 13.5px; color: var(--muted); }
   </div>
 
   <div class="grid2">
-    <section class="panel chart">
-      <div class="ptitle"><span>CLERE group capacity</span><span>MWp at year-end</span></div>
-      <svg viewBox="0 0 620 230" role="img" aria-label="CLERE group operating portfolio in MWp: 2018 85, 2019 124, 2020 153, 2021 164, 2022 166, 2023 166, 2024 129, 2025 129">
-        <defs><linearGradient id="gArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb020" stop-opacity=".35"/><stop offset="1" stop-color="#ffb020" stop-opacity="0"/></linearGradient></defs>
-        <g id="chart"></g>
-      </svg>
-      <p class="cap">Source: CLERE AG consolidated annual reports. From 2020 the total includes a 20 MWp share in a Japanese plant.</p>
+    <section class="panel">
+      <div class="ptitle"><span>Career milestones</span><span>2014 → 2026</span></div>
+      <ol class="miles">
+        <li class="w"><span class="y">11/2014</span><b>Head of Operations, Italy &amp; France</b><span>Joins Capital Stage (Encavis)</span></li>
+        <li class="w"><span class="y">2015</span><b>+56 MWp integrated</b><span>Friuli and Stumpf solar portfolios</span></li>
+        <li class="w"><span class="y">2016</span><b>CHORUS takeover</b><span>Italian solar and French wind parks</span></li>
+        <li class="w"><span class="y">2018</span><b>111 parks · ~500 MW</b><span>Solar and wind, Italy and France</span></li>
+        <li class="s"><span class="y">03/2019</span><b>Head of Asset Management</b><span>Joins CLERE AG</span></li>
+        <li class="s"><span class="y">2021</span><b>€33.5m refinancing</b><span>Non-recourse, 8 SPVs / 17 plants</span></li>
+        <li class="s"><span class="y">2022</span><b>166 MWp peak</b><span>Group portfolio managed</span></li>
+        <li class="s"><span class="y">2024</span><b>38 MWp sold</b><span>27 SPVs to Tages Capital SGR</span></li>
+        <li class="s"><span class="y">2025–26</span><b>+14.8 MWp</b><span>Repowering and new PPA plants</span></li>
+      </ol>
     </section>
     <section class="panel about">
       <div class="ptitle"><span>About me</span><span>README</span></div>
-      <p>I am an engineer who ended up in finance and never stopped being an engineer. I want to know why a plant underperforms before I explain it to a bank, and I would rather build a tool than repeat a spreadsheet every month. That is how I learned Microsoft Fabric and AI automation without being a programmer.</p>
-      <p>I like small teams, direct conversations and numbers that reconcile. I have spent twenty years in solar and I still enjoy visiting a plant on a sunny day.</p>
+      <p>I look after solar and wind parks as if they were my own: the yield, the contracts, the SPV accounts, the bank, the auditors, the next buyer. I have bought, financed, repowered and sold them, so I know what each stage costs when it goes wrong. My aim is simple: assets that perform and owners who are never surprised.</p>
+      <p>My other passion is AI and automation. I design AI agents and data platforms that take the repetitive work off my team, so we spend our time on the decisions that matter. I am not a programmer, but I enjoy turning an idea into a tool that works.</p>
     </section>
   </div>
 
@@ -260,9 +277,10 @@ dd { margin: 0; font-size: 13.5px; color: var(--muted); }
           <ul>
             <li>Commercial and technical responsibility for the whole operating portfolio, up to <strong>166 MWp</strong>; director (Amministratore) of the Italian holding and project companies.</li>
             <li>Lead the asset management team: <strong>5 people, up to 7</strong>.</li>
-            <li>Due diligence and integration of <strong>15 Italian SPVs</strong> (~20 MWp), 2020–2022.</li>
+            <li><strong>Due diligence lead:</strong> responsible for and coordinating technical, legal and tax due diligence on acquisitions and disposals, and carrying out reviews myself. 15 Italian SPVs (~20 MWp) acquired and integrated, 2020–2022.</li>
             <li>Revamping of 13 plants (18.1 MWp) and <strong>+14.8 MWp</strong> of PPA-based new builds and repowering (Enna, Orta Nova Sud, Melilli); budget and cost control of about €25m.</li>
-            <li>Lender reporting and covenants (DSCR), GSE feed-in tariff checks, budgeting, input to the group accounts.</li>
+            <li>Coordinate <strong>tax and accounting of each SPV</strong>; manage warranty and indemnity <strong>claims under QPAs and SPAs</strong>.</li>
+            <li><strong>Audit coordinator and point of contact</strong> for auditors; lender reporting and covenants (DSCR), incentive payment checks, budgeting, input to the group accounts.</li>
           </ul>
         </div></div>
         <div class="entry"><div class="t">11/2014 – 02/2019</div><div class="d w"></div><div>
@@ -277,7 +295,7 @@ dd { margin: 0; font-size: 13.5px; color: var(--muted); }
         <div class="entry"><div class="t">12/2010 – 08/2012</div><div class="d"></div><div><h3>Country Manager Italy</h3><div class="org">SUNfarming GmbH <small>· Erkner</small></div><p>PV components and large projects in Italy; permitting and financial close.</p></div></div>
         <div class="entry"><div class="t">12/2008 – 11/2010</div><div class="d"></div><div><h3>Key Account Manager, PV Power Plants</h3><div class="org">SOLON SE <small>· Berlin</small></div><p>Turn-key EPC and O&amp;M contracts for utility-scale PV plants in Italy.</p></div></div>
         <div class="entry"><div class="t">06/2005 – 11/2008</div><div class="d"></div><div><h3>Country Manager Italy</h3><div class="org">systaic AG <small>· Düsseldorf</small></div><p>Opened the Italian market for building-integrated PV.</p></div></div>
-        <div class="entry"><div class="t">02/2004 – 03/2005</div><div class="d" style="background:var(--muted)"></div><div><h3>Area Sales Manager</h3><div class="org" style="color:var(--muted)">Tecnofer Ecoimpianti S.r.l.</div><p>Sales of plastic-recycling plants.</p></div></div>
+        <div class="entry"><div class="t">02/2004 – 03/2005</div><div class="d"></div><div><h3>Area Sales Manager</h3><div class="org">Tecnofer Ecoimpianti S.r.l.</div><p>Sales of plastic-recycling plants.</p></div></div>
       </div>
     </section>
 
@@ -290,10 +308,10 @@ dd { margin: 0; font-size: 13.5px; color: var(--muted); }
 
       <section class="panel">
         <div class="ptitle"><span>Professional skills</span><span>4 areas</span></div>
-        <div class="sgroup"><h4><i style="--c:var(--sun)"></i>Asset Management</h4><div class="tags"><span>Commercial and technical management</span><span>Budget and P&amp;L</span><span>PR, availability, P50</span><span>O&amp;M and EPC contracts</span><span>Insurance and warranties</span></div></div>
-        <div class="sgroup"><h4><i style="--c:var(--wind)"></i>Transactions and finance</h4><div class="tags"><span>Due diligence</span><span>SPA negotiation</span><span>Signing to closing</span><span>Non-recourse project finance</span><span>DSCR covenants</span><span>Hedging</span></div></div>
-        <div class="sgroup"><h4><i style="--c:#c9a24a"></i>Regulation and grid</h4><div class="tags"><span>Conto Energia</span><span>GSE</span><span>FER-X</span><span>PPA</span><span>Grid connection (TICA, CEI 0-16)</span><span>Revamping and repowering</span></div></div>
-        <div class="sgroup"><h4><i style="--c:#6b7f93"></i>Leadership and governance</h4><div class="tags"><span>Team lead, up to 12</span><span>SPV managing director in 4 countries</span><span>Reporting to management and supervisory boards</span><span>Banks, advisors, authorities</span></div></div>
+        <div class="sgroup"><h4><i style="--c:var(--sun)"></i>Asset Management</h4><div class="tags"><span>Commercial and technical management</span><span>Budget and P&amp;L</span><span>SPV tax and accounting</span><span>PR, availability, P50</span><span>O&amp;M and EPC contracts</span><span>Insurance and warranties</span></div></div>
+        <div class="sgroup"><h4><i style="--c:var(--wind)"></i>Transactions and finance</h4><div class="tags"><span>Due diligence lead and hands-on</span><span>SPA negotiation</span><span>QPA/SPA claims</span><span>Signing to closing</span><span>Non-recourse project finance</span><span>DSCR covenants</span><span>Hedging</span></div></div>
+        <div class="sgroup"><h4><i style="--c:#c9a24a"></i>Regulation and grid</h4><div class="tags"><span>Incentive schemes</span><span>PPA</span><span>Grid connection</span><span>Revamping and repowering</span></div></div>
+        <div class="sgroup"><h4><i style="--c:#6b7f93"></i>Leadership and governance</h4><div class="tags"><span>Team lead, up to 12</span><span>SPV managing director in 4 countries</span><span>Reporting to management and supervisory boards</span><span>Audit coordination</span><span>Banks, advisors, authorities</span></div></div>
       </section>
 
       <section class="panel">
@@ -301,11 +319,11 @@ dd { margin: 0; font-size: 13.5px; color: var(--muted); }
         <div class="tools">
           <div class="tool"><i>FAB</i><div>
             <div class="th"><b>Microsoft Fabric and Power BI</b><span class="lvl"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>advanced</span></div>
-            <span class="d">Built a multi-country data platform: daily 15-minute monitoring data from the Meteocontrol VCOM API, meter data, master data from SharePoint, availability checks and Power BI report apps.</span>
+            <span class="d">Built a multi-country data platform: daily 15-minute data from different monitoring platforms connected via API, meter data, master data, availability checks and Power BI report apps.</span>
           </div></div>
           <div class="tool"><i>AI</i><div>
-            <div class="th"><b>AI-assisted automation</b><span class="lvl"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>advanced</span></div>
-            <span class="d">Reusable Claude Code and NotebookLM workflows for due diligence, GSE incentives, grid connection and construction cost control. Not a programmer: I design and deliver working tools.</span>
+            <div class="th"><b>AI agents</b><span class="lvl"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>advanced</span></div>
+            <span class="d">Reusable AI agents built with Claude Code and NotebookLM for due diligence, incentives, grid connection and construction cost control.</span>
           </div></div>
           <div class="tool"><i>XLS</i><div>
             <div class="th"><b>Excel financial modelling</b><span class="lvl"><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>expert</span></div>
@@ -354,24 +372,7 @@ dd { margin: 0; font-size: 13.5px; color: var(--muted); }
 <script>
 const CV_URL = "https://ingsalvatorebalistreri-cpu.github.io/Curriculum/";
 
-(function () {
-  const data = [[2018,85],[2019,124],[2020,153],[2021,164],[2022,166],[2023,166],[2024,129],[2025,129]];
-  const ev = { 2019: "Joined", 2021: "Refinancing", 2024: "Lumina sale" };
-  const W = 620, top = 34, bottom = 196, left = 36, right = 14, max = 200;
-  const X = i => left + i * (W - left - right) / (data.length - 1), Y = v => bottom - v / max * (bottom - top);
-  const ns = "http://www.w3.org/2000/svg", g = document.getElementById("chart");
-  const el = (t, a, txt) => { const e = document.createElementNS(ns, t); for (const k in a) e.setAttribute(k, a[k]); if (txt != null) e.textContent = txt; g.appendChild(e); return e; };
-  for (const t of [0, 50, 100, 150, 200]) { el("line", { x1: left, x2: W - right, y1: Y(t), y2: Y(t), class: "gl" }); el("text", { x: left - 6, y: Y(t) + 4, "text-anchor": "end", class: "ax" }, t); }
-  const pts = data.map(([, v], i) => [X(i), Y(v)]);
-  el("path", { d: "M" + pts.map(p => p.join(",")).join(" L") + ` L${X(data.length - 1)},${bottom} L${X(0)},${bottom} Z`, class: "area" });
-  el("path", { d: "M" + pts.map(p => p.join(",")).join(" L"), class: "lineP" });
-  data.forEach(([yr, v], i) => {
-    el("circle", { cx: X(i), cy: Y(v), r: 4, class: "pt" });
-    el("text", { x: X(i), y: Y(v) - 10, "text-anchor": "middle", class: "pv" }, v);
-    el("text", { x: X(i), y: bottom + 18, "text-anchor": "middle", class: "ax" }, yr);
-    if (ev[yr]) el("text", { x: X(i), y: top - 18, "text-anchor": "middle", class: "ev" }, ev[yr]);
-  });
-})();
+
 
 document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", () => {
   const span = document.getElementById(b.dataset.copy);
